@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build:file": "node build/bin/build-entry.js",
+    "build:theme": "node build/bin/gen-cssfile",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
