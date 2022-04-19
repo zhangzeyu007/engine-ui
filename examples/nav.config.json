@@ -291,6 +291,10 @@
             {
               "path": "/drawer",
               "title": "Drawer 抽屉"
+            },
+            {
+              "path": "/el-city",
+              "title": "ElCity"
             }
           ]
         }
@@ -589,6 +593,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/el-city",
+              "title": "ElCity"
             }
           ]
         }

@@ -12,7 +12,7 @@
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",
     "build:theme": "node build/bin/gen-cssfile",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "new": "node build/bin/new.js"
   },
   "dependencies": {
     "core-js": "^3.8.3"
@@ -36,6 +36,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-json": "^3.1.0",
+    "file-save": "^0.2.0",
     "json-templater": "^1.0.4",
     "uppercamelcase": "^1.1.0",
     "vue": "^2.5.17",
