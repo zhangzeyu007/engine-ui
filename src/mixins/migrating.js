@@ -1,3 +1,11 @@
+/*
+ * @Description:
+ * @Author: 张泽雨
+ * @Date: 2022-04-20 22:00:31
+ * @LastEditors: 张泽雨
+ * @LastEditTime: 2022-04-20 22:00:32
+ * @FilePath: \engine-ui\src\mixins\migrating.js
+ */
 import { kebabCase } from 'element-ui/src/utils/util';
 /**
  * Show migrating guide in browser console.

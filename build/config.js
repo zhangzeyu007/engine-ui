@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: 张泽雨
  * @Date: 2022-04-19 23:24:43
  * @LastEditors: 张泽雨
- * @LastEditTime: 2022-04-19 23:24:44
+ * @LastEditTime: 2022-04-20 21:59:11
  * @FilePath: \engine-ui\build\config.js
  */
 /**
@@ -16,7 +16,7 @@ var Components = require('../components.json');
 
 var utilsList = fs.readdirSync(path.resolve(__dirname, '../src/utils'));
 var mixinsList = fs.readdirSync(path.resolve(__dirname, '../src/mixins'));
-var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'));
+
 /**
  * externals 解决组件依赖其它组件并按需引入时代码冗余的问题
  *     比如 Table 组件依赖 Checkbox 组件，在项目中如果我同时引入 Table 和 Checkbox 时，会不会产生冗余代码
@@ -42,10 +42,6 @@ utilsList.forEach(function(file) {
 mixinsList.forEach(function(file) {
   file = path.basename(file, '.js');
   externals[`element-ui/src/mixins/${file}`] = `element-ui/lib/mixins/${file}`;
-});
-transitionList.forEach(function(file) {
-  file = path.basename(file, '.js');
-  externals[`element-ui/src/transitions/${file}`] = `element-ui/lib/transitions/${file}`;
 });
 
 externals = [Object.assign({

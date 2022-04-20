@@ -4,12 +4,10 @@ import Input from '../packages/input/index.js';
 import ElCity from '../packages/el-city/index.js';
 import Loading from '../packages/loading/index.js';
 import locale from 'element-ui/src/locale';
-import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
 const components = [
   Input,
-  ElCity,
-  CollapseTransition
+  ElCity
 ];
 
 const install = function(Vue, opts = {}) {
@@ -37,7 +35,6 @@ export default {
   locale: locale.use,
   i18n: locale.i18n,
   install,
-  CollapseTransition,
   Loading,
   Input,
   ElCity
