@@ -6,25 +6,5 @@
  * @LastEditTime: 2022-04-19 14:10:14
  * @FilePath: \engine-ui\README.md
 -->
-# engine-ui
-
-## Project setup
-
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# engine-ui 
+## 组件库基于ElementUi 组件库原理搭建
