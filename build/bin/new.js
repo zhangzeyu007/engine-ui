@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: 张泽雨
  * @Date: 2022-04-19 16:11:49
  * @LastEditors: 张泽雨
- * @LastEditTime: 2022-04-19 18:18:55
+ * @LastEditTime: 2022-04-20 21:26:09
  * @FilePath: \engine-ui\build\bin\new.js
  */
 'use strict';
@@ -47,7 +47,6 @@ const ComponentName = uppercamelcase(componentname);
 // 组件包目录，/packages/city
 const PackagePath = path.resolve(__dirname, '../../packages', componentname);
 console.log(PackagePath);
-
 
 // 需要添加的文件列表和文件内容的基本结构
 const Files = [

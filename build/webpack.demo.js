@@ -1,9 +1,9 @@
 /*
- * @Description: 
+ * @Description:
  * @Author: 张泽雨
  * @Date: 2022-04-20 11:26:03
  * @LastEditors: 张泽雨
- * @LastEditTime: 2022-04-20 11:26:05
+ * @LastEditTime: 2022-04-20 21:23:41
  * @FilePath: \engine-ui\build\webpack.demo.js
  */
 // 官网的 webpack 配置
@@ -39,8 +39,8 @@ const webpackConfig = {
     modules: ['node_modules']
   },
   devServer: {
-    host: '0.0.0.0',
-    port: 8085,
+    host: '127.0.0.1',
+    port: 8081,
     publicPath: '/',
     hot: true
   },

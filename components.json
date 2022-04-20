@@ -1,4 +1,5 @@
 {
   "input": "./packages/input/index.js",
-  "el-city": "./packages/el-city/index.js"
+  "el-city": "./packages/el-city/index.js",
+  "loading": "./packages/loading/index.js"
 }

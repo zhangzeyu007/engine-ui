@@ -3,7 +3,7 @@
  * @Author: 张泽雨
  * @Date: 2022-04-19 13:12:06
  * @LastEditors: 张泽雨
- * @LastEditTime: 2022-04-19 14:06:14
+ * @LastEditTime: 2022-04-20 21:28:12
  * @FilePath: \engine-ui\build\bin\build-entry.js
  */
 /**
@@ -14,19 +14,19 @@
  */
 
 //  key 为包名、路径为值
-var Components = require('../../components.json')
-var fs = require('fs')
+var Components = require('../../components.json');
+var fs = require('fs');
 // 模版库
-var render = require('json-templater/string')
+var render = require('json-templater/string');
 // 负责将 comp-name 形式的字符串转换为 CompName
-var uppercamelcase = require('uppercamelcase')
-var path = require('path')
-var endOfLine = require('os').EOL
+var uppercamelcase = require('uppercamelcase');
+var path = require('path');
+var endOfLine = require('os').EOL;
 
 // 输出路径 /src/index.js
-var OUTPUT_PATH = path.join(__dirname, '../../src/index.js')
+var OUTPUT_PATH = path.join(__dirname, '../../src/index.js');
 // 导入模版，import CompName from '../packages/comp-name/index.js'
-var IMPORT_TEMPLATE = 'import {{name}} from \'../packages/{{package}}/index.js\';'
+var IMPORT_TEMPLATE = 'import {{name}} from \'../packages/{{package}}/index.js\';';
 // ' CompName'
 var INSTALL_COMPONENT_TEMPLATE = '  {{name}}';
 
@@ -49,23 +49,12 @@ const install = function(Vue, opts = {}) {
   components.forEach(component => {
     Vue.component(component.name, component);
   });
-
-  Vue.use(InfiniteScroll);
   Vue.use(Loading.directive);
-
   Vue.prototype.$ELEMENT = {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-
   Vue.prototype.$loading = Loading.service;
-  Vue.prototype.$msgbox = MessageBox;
-  Vue.prototype.$alert = MessageBox.alert;
-  Vue.prototype.$confirm = MessageBox.confirm;
-  Vue.prototype.$prompt = MessageBox.prompt;
-  Vue.prototype.$notify = Notification;
-  Vue.prototype.$message = Message;
-
 };
 
 /* istanbul ignore if */
@@ -94,7 +83,6 @@ var includeComponentTemplate = [];
 var installTemplate = [];
 // 组件名数组
 var listTemplate = [];
-
 
 // 遍历所有的包名
 ComponentNames.forEach(name => {
@@ -130,7 +118,6 @@ var template = render(MAIN_TEMPLATE, {
   // 导出组件列表
   list: listTemplate.join(',' + endOfLine)
 });
-
 
 // 将就绪的模版写入 /src/index.js
 fs.writeFileSync(OUTPUT_PATH, template);
